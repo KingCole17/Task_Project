@@ -1,0 +1,23 @@
+{%extends 'partials/base.html'%} <br>
+{%block title %}Delete{%endblock%}
+{%block content%}
+<div class="container">
+<div class="row">
+    <div class="col-md-6 offset-md-3 mt-4">
+        <div class="card">
+          <div class="cardheader  text-center bg-dark text-white p-3">DELETE TASK</div>
+          <div class="card-body">
+            <div class="alert alert-danger">ARE YOU SURE YOU WANT TO DELETE?</div>
+      
+            <form method="POST">
+                {%csrf_token%}
+                <a class="btn btn-secondary btn-sm" href="{% url 'taskapp-index' %}">NO</a>
+            <input class="btn btn-danger btn-sm" type="submit" value="YES">
+            </div>
+        </form>
+        
+        </div>
+    </div>
+</div>
+</div>
+{%endblock%}
